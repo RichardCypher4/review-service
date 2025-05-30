@@ -6,13 +6,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(
-        origins = "*",
-        methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE, RequestMethod.OPTIONS},
-        allowedHeaders = {"Content-Type", "Authorization"}
-)
+
 @RestController
 @RequestMapping("/reviews")
+@CrossOrigin(origins = "http://localhost:5173")
 public class ReviewController {
 
     private final ReviewService service;
